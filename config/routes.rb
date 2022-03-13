@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get "/all_movies_alphabetical" => "movies#all_movies_alphabetical"
   get "/individual_movie/:" => "movies#individual_movie"
   get "individual_actor" => "movies#show"
+  get "individual_actor/:id" => "movies#show"
+  post "individual_actor" => "movies#show"
 end
