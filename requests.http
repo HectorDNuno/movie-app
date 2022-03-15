@@ -1,6 +1,29 @@
-POST http://localhost:3000/individual_actor
+### shows all movies
+GET http://localhost:3000/movies
+Content-Type: application/json
+
+### shows single movie
+GET http://localhost:3000/movie/6
+Content-Type: application/json
+
+### creates movie
+POST http://localhost:3000/movie/
 Content-Type: application/json
 
 {
-  "id": "6"
+  "title": "Rouge One: A Star Wars Story",
+  "year": "2016",
+  "plot": "Former scientist Galen Erso lives on a farm with his wife and young daughter, Jyn. His peaceful existence comes crashing down when the evil Orson Krennic takes him away from his beloved family."
 }
+
+### updates movie
+PATCH http://localhost:3000/movie/7
+Content-Type: application/json
+
+{
+  "title": "Rogue One: A Star Wars Story"
+}
+
+### deletes movie
+DELETE  http://localhost:3000/movie/6
+Content-Type: application/json
