@@ -1,0 +1,31 @@
+### shows all actors
+GET http://localhost:3000/actors
+Content-Type: application/json
+
+### shows single actor
+GET http://localhost:3000/actor/6
+Content-Type: application/json
+
+### creates actor
+POST http://localhost:3000/actor/
+Content-Type: application/json
+
+{
+  "first_name": "Penelope",
+  "last_name": "Cruz",
+  "known_for": "Spanglish"
+}
+
+### updates actor
+PATCH http://localhost:3000/actor/8
+Content-Type: application/json
+
+{
+  "first_name": "Selma",
+  "last_name": "Hayek",
+  "known_for": "Mariachi"
+}
+
+### deletes actor
+DELETE  http://localhost:3000/actor/10
+Content-Type: application/json

@@ -1,42 +1,37 @@
 class ActorsController < ApplicationController
-  # def benedict_method
-  #   actor = Actor.find(6)
-  #   render json: actor.as_json
-  # end
-
   def index
     actor = Actor.all
     render json: actor
   end
 
   def create
-    movie = Movie.create(
-      title: params["title"],
-      year: params["year"],
-      plot: params["plot"],
+    actor = Actor.create(
+      first_name: params["first_name"],
+      last_name: params["last_name"],
+      known_for: params["known_for"],
     )
-    render json: movie.as_json
+    render json: actor.as_json
   end
 
   def show
     id = params["id"]
-    render json: { message: Movie.find(id) }
+    render json: { message: Actor.find(id) }
   end
 
   def update
-    movie_id = params["id"]
-    movie = Movie.find(movie_id)
-    movie.title = params["title"] || movie.title
-    movie.year = params["year"] || movie.year
-    movie.plot = params["plot"] || movie.plot
-    movie.save
-    render json: movie.as_json
+    actor_id = params["id"]
+    actor = Actor.find(actor_id)
+    actor.first_name = params["first_name"] || actor.first_name
+    actor.last_name = params["last_name"] || actor.last_name
+    actor.known_for = params["known_for"] || actor.known_for
+    actor.save
+    render json: actor.as_json
   end
 
   def destroy
-    movie_id = params["id"]
-    movie = Movie.find(movie_id)
-    movie.destroy
-    render json: { message: "Movie deleted" }
+    actor_id = params["id"]
+    actor = Actor.find(actor_id)
+    actor.destroy
+    render json: { message: "Actor deleted" }
   end
 end
