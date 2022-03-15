@@ -4,4 +4,10 @@ Rails.application.routes.draw do
   post "/movie" => "movies#create"
   patch "/movie/:id" => "movies#update"
   delete "/movie/:id" => "movies#destroy"
+
+  get "/actors" => "actoers#index"
+  get "/movie/:id" => "movies#show"
+  post "/movie" => "movies#create"
+  patch "/movie/:id" => "movies#update"
+  delete "/movie/:id" => "movies#destroy"
 end
