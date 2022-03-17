@@ -13,15 +13,16 @@ Content-Type: application/json
 {
   "title": "Rouge One: A Star Wars Story",
   "year": "2016",
-  "plot": "Former scientist Galen Erso lives on a farm with his wife and young daughter, Jyn. His peaceful existence comes crashing down when the evil Orson Krennic takes him away from his beloved family."
+  "plot": "Former scientist Galen Erso lives on a farm with his wife and young daughter, Jyn. His peaceful existence comes crashing down when the evil Orson Krennic takes him away from his beloved family.",
+  "director": "Gareth Edwards"
 }
 
 ### updates movie
-PATCH http://localhost:3000/movie/7
+PATCH http://localhost:3000/movie/8
 Content-Type: application/json
 
 {
-  "title": "Rogue One: A Star Wars Story"
+  "english": "true"
 }
 
 ### deletes movie
