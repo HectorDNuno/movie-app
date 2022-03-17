@@ -3,7 +3,7 @@ GET http://localhost:3000/actors.json
 Content-Type: application/json
 
 ### shows single actor
-GET http://localhost:3000/actor/8.json
+GET http://localhost:3000/actor/11.json
 Content-Type: application/json
 
 ### creates actor
@@ -19,17 +19,14 @@ Content-Type: application/json
 }
 
 ### updates actor
-PATCH http://localhost:3000/actor/8.json
+PATCH http://localhost:3000/actor/9.json
 Content-Type: application/json
 
 {
-  "first_name": "Selma",
-  "last_name": "Hayek",
-  "known_for": "Mariachi",
-  "age": "55",
-  "gender": "female"
+  "age": "47",
+  "gender": "Female"
 }
 
 ### deletes actor
-DELETE  http://localhost:3000/actor/10
+DELETE  http://localhost:3000/actor/6
 Content-Type: application/json
