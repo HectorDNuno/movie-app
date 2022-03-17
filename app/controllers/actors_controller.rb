@@ -1,7 +1,8 @@
 class ActorsController < ApplicationController
   def index
     actor = Actor.all
-    render json: actor
+    @actor = actor
+    render template: "actors/index"
   end
 
   def create
@@ -12,12 +13,14 @@ class ActorsController < ApplicationController
       age: params["age"],
       gender: params["gender"],
     )
-    render json: actor.as_json
+    @actor = actor
+    render template: "actors/show"
   end
 
   def show
     id = params["id"]
-    render json: { message: Actor.find(id) }
+    @actor = Actor.find(id)
+    render template: "actors/show"
   end
 
   def update

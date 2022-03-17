@@ -1,29 +1,33 @@
 ### shows all actors
-GET http://localhost:3000/actors
+GET http://localhost:3000/actors.json
 Content-Type: application/json
 
 ### shows single actor
-GET http://localhost:3000/actor/6
+GET http://localhost:3000/actor/8.json
 Content-Type: application/json
 
 ### creates actor
-POST http://localhost:3000/actor/
+POST http://localhost:3000/actor.json
 Content-Type: application/json
 
 {
-  "first_name": "Penelope",
-  "last_name": "Cruz",
-  "known_for": "Spanglish"
+  "first_name": "Viola",
+  "last_name": "Davis",
+  "known_for": "How to Get Away With Murder",
+  "gender": "female",
+  "age": "56"
 }
 
 ### updates actor
-PATCH http://localhost:3000/actor/8
+PATCH http://localhost:3000/actor/8.json
 Content-Type: application/json
 
 {
   "first_name": "Selma",
   "last_name": "Hayek",
-  "known_for": "Mariachi"
+  "known_for": "Mariachi",
+  "age": "55",
+  "gender": "female"
 }
 
 ### deletes actor

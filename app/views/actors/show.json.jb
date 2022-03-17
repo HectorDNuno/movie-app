@@ -6,5 +6,5 @@
   age: @actor.age,
   gender: @actor.gender,
   created_at: @actor.created_at,
-  updated_at: @actor.updated_at,
+  updated_at: @actor.updated_at
 }
