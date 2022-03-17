@@ -1,6 +1,10 @@
 @actors.map do |actor|
   {
     id: actor.id,
-    url: actor_url(actor, format: :json)
+    first_name: actor.first_name,
+    last_name: actor.last_name,
+    known_for: actor.known_for,
+    age: actor.age,
+    gender: actor.gender,
   }
 end
