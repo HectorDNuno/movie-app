@@ -4,6 +4,12 @@ class ActorsController < ApplicationController
     render template: "actors/index"
   end
 
+  def show
+    id = params["id"]
+    @actor = Actor.find(id)
+    render template: "actors/show"
+  end
+
   def create
     @actor = Actor.create(
       first_name: params["first_name"],
@@ -12,13 +18,11 @@ class ActorsController < ApplicationController
       age: params["age"],
       gender: params["gender"],
     )
-    render template: "actors/show"
-  end
-
-  def show
-    id = params["id"]
-    @actor = Actor.find(id)
-    render template: "actors/show"
+    if @actor.save
+      render template: "actors/show"
+    else
+      render json: { errors: @actor.errors.full_messages }, status: 422
+    end
   end
 
   def update
@@ -30,7 +34,11 @@ class ActorsController < ApplicationController
     @actor.age = params["age"] || @actor.age
     @actor.gender = params["gender"] || @actor.gender
     @actor.save
-    render template: "actors/show"
+    if @actor.save
+      render template: "actors/show"
+    else
+      render json: { errors: @actor.errors.full_messages }, status: 422
+    end
   end
 
   def destroy
