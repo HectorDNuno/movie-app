@@ -1,30 +1,32 @@
 ### shows all movies
-GET http://localhost:3000/movies
+GET http://localhost:3000/movies.json
 Content-Type: application/json
 
 ### shows single movie
-GET http://localhost:3000/movie/6
+GET http://localhost:3000/movie/2.json
 Content-Type: application/json
 
 ### creates movie
-POST http://localhost:3000/movie/
+POST http://localhost:3000/movie.json
 Content-Type: application/json
 
 {
-  "title": "Rouge One: A Star Wars Story",
-  "year": "2016",
-  "plot": "Former scientist Galen Erso lives on a farm with his wife and young daughter, Jyn. His peaceful existence comes crashing down when the evil Orson Krennic takes him away from his beloved family.",
-  "director": "Gareth Edwards"
-}
-
-### updates movie
-PATCH http://localhost:3000/movie/8
-Content-Type: application/json
-
-{
+  "title": "Hereditary",
+  "year": "2018",
+  "plot": "American miniature artist Annie Graham lives in Utah with her Irish psychiatrist husband Steve, their 16-year-old son Peter, and their 13-year-old daughter Charlie.",
+  "director": "Ari Aster",
   "english": "true"
 }
 
+### updates movie
+PATCH http://localhost:3000/movie/3.json
+Content-Type: application/json
+
+{
+  "english": "true",
+  "director": "Ridley Scott"
+}
+
 ### deletes movie
-DELETE  http://localhost:3000/movie/6
+DELETE  http://localhost:3000/movie/5.json
 Content-Type: application/json
