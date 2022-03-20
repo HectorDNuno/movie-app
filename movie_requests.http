@@ -11,10 +11,10 @@ POST http://localhost:3000/movie.json
 Content-Type: application/json
 
 {
-  "title": "Hereditary",
-  "year": "2018",
-  "plot": "American miniature artist Annie Graham lives in Utah with her Irish psychiatrist husband Steve, their 16-year-old son Peter, and their 13-year-old daughter Charlie.",
-  "director": "Ari Aster",
+  "title": "Avatar",
+  "year": "2009",
+  "plot": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+  "director": "James Cameron",
   "english": "true"
 }
 

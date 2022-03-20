@@ -11,11 +11,12 @@ POST http://localhost:3000/actor.json
 Content-Type: application/json
 
 {
-  "first_name": "Viola",
-  "last_name": "Davis",
-  "known_for": "How to Get Away With Murder",
+  "first_name": "Zoe",
+  "last_name": "Saldaña",
+  "known_for": "Avatar",
+  "movie_id": "10",
   "gender": "female",
-  "age": "56"
+  "age": "43"
 }
 
 ### updates actor
