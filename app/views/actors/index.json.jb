@@ -4,7 +4,8 @@
     first_name: actor.first_name,
     last_name: actor.last_name,
     known_for: actor.known_for,
+    movie: actor.movie,
     age: actor.age,
-    gender: actor.gender
+    gender: actor.gender,
   }
 end

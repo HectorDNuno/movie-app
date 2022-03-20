@@ -3,8 +3,9 @@
   first_name: @actor.first_name,
   last_name: @actor.last_name,
   known_for: @actor.known_for,
+  movie: @actor.movie,
   age: @actor.age,
   gender: @actor.gender,
   created_at: @actor.created_at,
-  updated_at: @actor.updated_at
+  updated_at: @actor.updated_at,
 }
