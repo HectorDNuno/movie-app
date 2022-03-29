@@ -1,0 +1,8 @@
+### create movie_genre
+POST http://localhost:3000/moviegenre
+Content-Type: application/json
+
+{
+  "genre_id": 1,
+  "movie_id": 3
+}
