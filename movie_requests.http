@@ -1,3 +1,5 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTAwNjQzNjZ9._eGS8XGT1z9SOlqL5vEp8Hch3gjhpzBxv8Jy_WuJFRw
+
 ### shows all movies
 GET http://localhost:3000/movies.json
 Content-Type: application/json
@@ -8,6 +10,7 @@ Content-Type: application/json
 
 ### creates movie
 POST http://localhost:3000/movie.json
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
@@ -20,6 +23,7 @@ Content-Type: application/json
 
 ### updates movie
 PATCH http://localhost:3000/movie/3.json
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
@@ -28,5 +32,5 @@ Content-Type: application/json
 }
 
 ### deletes movie
-DELETE  http://localhost:3000/movie/5.json
-Content-Type: application/json
+DELETE  http://localhost:3000/movie/10.json
+Authorization: Bearer {{jwt}}
