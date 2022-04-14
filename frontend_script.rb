@@ -1,5 +1,5 @@
-require "http"
+# require "http"
 
-response = HTTP.get("http://localhost:3000/all_movies")
+# response = HTTP.get("http://localhost:3000/all_movies")
 
-pp response.parse(:json)
+# pp response.parse(:json)
