@@ -9,4 +9,9 @@ class UsersController < ApplicationController
     user.save
     render json: user
   end
+
+  def show
+    user = current_user
+    render json: user
+  end
 end
